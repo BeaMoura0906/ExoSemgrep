@@ -17,7 +17,7 @@ namespace XXEExamples.Tests
             {
                 XmlReaderSettings settings = new XmlReaderSettings();
                 settings.DtdProcessing = DtdProcessing.Prohibit;
-                settings.XmlResolver = null;
+                settings.XmlResolver = new XmlUrlResolver();
                 settings.MaxCharactersFromEntities = 6000;
 
                 using (MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(xml)))
